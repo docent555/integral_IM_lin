@@ -17,9 +17,10 @@ Jp = zeros(NZ,NZ);
 Km = zeros(NZ,NZ);
 Kp = zeros(NZ,NZ);
 
-i = 251;
+j=(1:NZ+1)';
+i=1:NZ+1;
 % for i=1:NZ+1
-    for j=1:NZ+1
+%     for j=1:NZ+1
         Jm(j,i) = ((j-i)*DZ)/SQRT2PIT;
         Km(j,i) = ((j-i)*DZ).^2/(4*DT);
         Jp(j,i) = ((j-2+i)*DZ)/SQRT2PIT;
@@ -32,7 +33,7 @@ i = 251;
         Cp(j,i) = cos(Kp(j,i));
         Sm(j,i) = sin(Km(j,i));
         Sp(j,i) = sin(Kp(j,i));        
-    end  
+%     end  
 % end
 end
 

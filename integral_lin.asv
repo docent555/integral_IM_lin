@@ -1,11 +1,11 @@
 clear all;
 
 Nz = 3000;
-DT = 100;
+DT = 0.1;
 Zout = 47;
 DZ = Zout/Nz
 ZAxis = 0:Zout/Nz:Zout;
-I = 80;
+I = 720;
 Z = I*DZ;
 % Z=23.500000000000000;
 % f = @(z) exp(-3*((z - Zout/2)./(Zout/2)).^2) + 1i*exp(-3*((z - Zout/2)./(Zout/2)).^2);
@@ -50,10 +50,4 @@ Is
 % Is_old = Is_old*1/2*sqrt(1i/(pi*DT))
 
 plot(ZAxis, yfs, ZAxis, yfg)
-
-fileID = fopen('test.dat','w');
-for i=1:Nz
-    fprintf(fileID,'%e\t%e\n', real(I1(i)), imag(I1(i)));
-end
-fclose(fileID);
 

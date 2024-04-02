@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21185,        687]
-NotebookOptionsPosition[     19758,        653]
-NotebookOutlinePosition[     20204,        670]
-CellTagsIndexPosition[     20161,        667]
+NotebookDataLength[     28282,        840]
+NotebookOptionsPosition[     26088,        793]
+NotebookOutlinePosition[     26532,        810]
+CellTagsIndexPosition[     26489,        807]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,12 +60,11 @@ Cell[BoxData[
            RowBox[{"4", " ", "DT"}]], "]"}]}]}], ")"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"x", ",", " ", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"j", "-", "1"}], ")"}], "*", "DZ"}], ",", " ", 
-       RowBox[{"j", "*", "DZ"}]}], "}"}]}], "]"}]}]}]], "Input",
+       RowBox[{"zj", "-", "DZ"}], ",", " ", "zj"}], "}"}]}], 
+    "]"}]}]}]], "Input",
  CellChangeTimes->{{3.917068241074242*^9, 3.9170682718001933`*^9}, {
-  3.9170729221818633`*^9, 3.917073072988496*^9}},
+  3.9170729221818633`*^9, 3.917073072988496*^9}, {3.921031728854724*^9, 
+  3.9210317448773594`*^9}},
  CellLabel->"In[1]:=",ExpressionUUID->"29d0199e-9100-47f7-8539-8363fc4b47ca"],
 
 Cell[BoxData[
@@ -75,33 +74,10 @@ Cell[BoxData[
    RowBox[{"2", " ", "\[Pi]"}]], " ", 
   RowBox[{"(", 
    RowBox[{
-    RowBox[{"-", 
-     RowBox[{"FresnelC", "[", 
-      FractionBox[
-       RowBox[{
-        RowBox[{"DZ", " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
-       RowBox[{
-        SqrtBox["DT"], " ", 
-        SqrtBox[
-         RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], "+", 
     RowBox[{"FresnelC", "[", 
      FractionBox[
       RowBox[{
-       RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
-      RowBox[{
-       SqrtBox["DT"], " ", 
-       SqrtBox[
-        RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "+", 
-    RowBox[{"FresnelC", "[", 
-     FractionBox[
-      RowBox[{
-       RowBox[{"DZ", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
+       RowBox[{"-", "Z"}], "+", "zj"}], 
       RowBox[{
        SqrtBox["DT"], " ", 
        SqrtBox[
@@ -109,21 +85,33 @@ Cell[BoxData[
     RowBox[{"FresnelC", "[", 
      FractionBox[
       RowBox[{
-       RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
+       RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
+      RowBox[{
+       SqrtBox["DT"], " ", 
+       SqrtBox[
+        RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "-", 
+    RowBox[{"FresnelC", "[", 
+     FractionBox[
+      RowBox[{"Z", "+", "zj"}], 
       RowBox[{
        SqrtBox["DT"], " ", 
        SqrtBox[
         RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "+", 
+    RowBox[{"FresnelC", "[", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
+      RowBox[{
+       SqrtBox["DT"], " ", 
+       SqrtBox[
+        RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "-", 
     RowBox[{"\[ImaginaryI]", " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"FresnelS", "[", 
         FractionBox[
          RowBox[{
-          RowBox[{"DZ", " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
+          RowBox[{"-", "Z"}], "+", "zj"}], 
          RowBox[{
           SqrtBox["DT"], " ", 
           SqrtBox[
@@ -131,18 +119,14 @@ Cell[BoxData[
        RowBox[{"FresnelS", "[", 
         FractionBox[
          RowBox[{
-          RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
+          RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
          RowBox[{
           SqrtBox["DT"], " ", 
           SqrtBox[
            RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "-", 
        RowBox[{"FresnelS", "[", 
         FractionBox[
-         RowBox[{
-          RowBox[{"DZ", " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
+         RowBox[{"Z", "+", "zj"}], 
          RowBox[{
           SqrtBox["DT"], " ", 
           SqrtBox[
@@ -150,14 +134,17 @@ Cell[BoxData[
        RowBox[{"FresnelS", "[", 
         FractionBox[
          RowBox[{
-          RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
+          RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
          RowBox[{
           SqrtBox["DT"], " ", 
           SqrtBox[
            RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], ")"}]}]}], 
    ")"}]}]], "Output",
- CellChangeTimes->{3.9170730847201467`*^9, 3.917073504370229*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"e544af2d-2cf0-4bcb-80e3-40e36b7f1dad"]
+ CellChangeTimes->{3.9170730847201467`*^9, 3.917073504370229*^9, 
+  3.921031795072456*^9, 3.9210363260594645`*^9, 3.9210364405080624`*^9, 
+  3.92105098897968*^9, 3.921051139503392*^9, 3.921051363975284*^9, 
+  3.921051406131318*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"889fb32a-78d0-4d0d-ba62-7db7d6fb0134"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -201,31 +188,13 @@ Cell[BoxData[
             RowBox[{"4", " ", "DT"}]], "]"}]}]}], ")"}]}], ")"}]}], ",", 
     RowBox[{"{", 
      RowBox[{"x", ",", " ", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"j", "-", "1"}], ")"}], "*", "DZ"}], ",", " ", 
-      RowBox[{"j", "*", "DZ"}]}], "}"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.9170731151232433`*^9, 3.917073131431825*^9}},
+      RowBox[{"zj", "-", "DZ"}], ",", " ", "zj"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9170731151232433`*^9, 3.917073131431825*^9}, 
+   3.9210317686331635`*^9},
  CellLabel->"In[2]:=",ExpressionUUID->"761fb3e8-2e49-479e-a3f3-37da1a16fb2c"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{
-   RowBox[{"-", 
-    SqrtBox["DT"]}], " ", 
-   SqrtBox[
-    RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-   RowBox[{"FresnelC", "[", 
-    FractionBox[
-     RowBox[{
-      RowBox[{"DZ", " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
-     RowBox[{
-      SqrtBox["DT"], " ", 
-      SqrtBox[
-       RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], "+", 
   RowBox[{
    SqrtBox["DT"], " ", 
    SqrtBox[
@@ -233,7 +202,7 @@ Cell[BoxData[
    RowBox[{"FresnelC", "[", 
     FractionBox[
      RowBox[{
-      RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
+      RowBox[{"-", "Z"}], "+", "zj"}], 
      RowBox[{
       SqrtBox["DT"], " ", 
       SqrtBox[
@@ -245,10 +214,7 @@ Cell[BoxData[
    RowBox[{"FresnelC", "[", 
     FractionBox[
      RowBox[{
-      RowBox[{"DZ", " ", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
+      RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
      RowBox[{
       SqrtBox["DT"], " ", 
       SqrtBox[
@@ -259,8 +225,19 @@ Cell[BoxData[
     RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
    RowBox[{"FresnelC", "[", 
     FractionBox[
+     RowBox[{"Z", "+", "zj"}], 
      RowBox[{
-      RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
+      SqrtBox["DT"], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], "-", 
+  RowBox[{
+   SqrtBox["DT"], " ", 
+   SqrtBox[
+    RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+   RowBox[{"FresnelC", "[", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
      RowBox[{
       SqrtBox["DT"], " ", 
       SqrtBox[
@@ -275,16 +252,13 @@ Cell[BoxData[
          FractionBox[
           SuperscriptBox[
            RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"-", "DZ"}], " ", "j"}], "+", "Z"}], ")"}], "2"], 
+            RowBox[{"Z", "-", "zj"}], ")"}], "2"], 
           RowBox[{"4", " ", "DT"}]], "]"}], "-", 
         RowBox[{"Cos", "[", 
          FractionBox[
           SuperscriptBox[
            RowBox[{"(", 
-            RowBox[{"DZ", "-", 
-             RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
+            RowBox[{"DZ", "+", "Z", "-", "zj"}], ")"}], "2"], 
           RowBox[{"4", " ", "DT"}]], "]"}]}], ")"}]}], "+", 
      RowBox[{
       SqrtBox["DT"], " ", 
@@ -292,21 +266,19 @@ Cell[BoxData[
        RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
       RowBox[{"(", 
        RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelS", "[", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"-", "Z"}], "+", "zj"}], 
+           RowBox[{
+            SqrtBox["DT"], " ", 
+            SqrtBox[
+             RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], "+", 
         RowBox[{"FresnelS", "[", 
          FractionBox[
           RowBox[{
-           RowBox[{"DZ", " ", 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
-          RowBox[{
-           SqrtBox["DT"], " ", 
-           SqrtBox[
-            RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "-", 
-        RowBox[{"FresnelS", "[", 
-         FractionBox[
-          RowBox[{
-           RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
+           RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
           RowBox[{
            SqrtBox["DT"], " ", 
            SqrtBox[
@@ -317,23 +289,19 @@ Cell[BoxData[
      RowBox[{"2", " ", "DT", " ", 
       RowBox[{"(", 
        RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Cos", "[", 
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"Z", "+", "zj"}], ")"}], "2"], 
+           RowBox[{"4", " ", "DT"}]], "]"}]}], "+", 
         RowBox[{"Cos", "[", 
          FractionBox[
           SuperscriptBox[
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"DZ", " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], ")"}], 
-           "2"], 
-          RowBox[{"4", " ", "DT"}]], "]"}], "-", 
-        RowBox[{"Cos", "[", 
-         FractionBox[
-          SuperscriptBox[
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
+             RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], ")"}], "2"], 
           RowBox[{"4", " ", "DT"}]], "]"}]}], ")"}]}], "+", 
      RowBox[{
       SqrtBox["DT"], " ", 
@@ -341,21 +309,18 @@ Cell[BoxData[
        RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
       RowBox[{"(", 
        RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelS", "[", 
+          FractionBox[
+           RowBox[{"Z", "+", "zj"}], 
+           RowBox[{
+            SqrtBox["DT"], " ", 
+            SqrtBox[
+             RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}]}], "+", 
         RowBox[{"FresnelS", "[", 
          FractionBox[
           RowBox[{
-           RowBox[{"DZ", " ", 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
-          RowBox[{
-           SqrtBox["DT"], " ", 
-           SqrtBox[
-            RowBox[{"2", " ", "\[Pi]"}]]}]], "]"}], "-", 
-        RowBox[{"FresnelS", "[", 
-         FractionBox[
-          RowBox[{
-           RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
+           RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
           RowBox[{
            SqrtBox["DT"], " ", 
            SqrtBox[
@@ -367,89 +332,84 @@ Cell[BoxData[
       FractionBox[
        SuperscriptBox[
         RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"-", "DZ"}], " ", "j"}], "+", "Z"}], ")"}], "2"], 
+         RowBox[{"Z", "-", "zj"}], ")"}], "2"], 
        RowBox[{"4", " ", "DT"}]], "]"}], "-", 
      RowBox[{"Sin", "[", 
       FractionBox[
        SuperscriptBox[
         RowBox[{"(", 
-         RowBox[{"DZ", "-", 
-          RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
+         RowBox[{"DZ", "+", "Z", "-", "zj"}], ")"}], "2"], 
        RowBox[{"4", " ", "DT"}]], "]"}]}], ")"}]}], "+", 
   RowBox[{"2", " ", "DT", " ", 
    RowBox[{"(", 
     RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Z", "+", "zj"}], ")"}], "2"], 
+        RowBox[{"4", " ", "DT"}]], "]"}]}], "+", 
      RowBox[{"Sin", "[", 
       FractionBox[
        SuperscriptBox[
         RowBox[{"(", 
          RowBox[{
-          RowBox[{"DZ", " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], ")"}], "2"], 
-       RowBox[{"4", " ", "DT"}]], "]"}], "-", 
-     RowBox[{"Sin", "[", 
-      FractionBox[
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
+          RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], ")"}], "2"], 
        RowBox[{"4", " ", "DT"}]], "]"}]}], ")"}]}]}]], "Output",
- CellChangeTimes->{3.917073140757786*^9, 3.9170735132314653`*^9},
- CellLabel->"Out[2]=",ExpressionUUID->"762c6834-72f5-4dce-a488-b9fbd77510cc"]
+ CellChangeTimes->{3.917073140757786*^9, 3.9170735132314653`*^9, 
+  3.9210318035452447`*^9, 3.9210363310731163`*^9, 3.9210364456403694`*^9, 
+  3.9210509947006097`*^9, 3.9210511452434216`*^9, 3.921051369681836*^9, 
+  3.9210514118331194`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"0babcbd4-dca7-4b71-94ce-9e6b99d2f349"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"I1", " ", "/.", " ", 
-  RowBox[{"{", 
-   RowBox[{
+ RowBox[{"I1", "=", 
+  RowBox[{"I1", " ", "/.", " ", 
+   RowBox[{"{", 
     RowBox[{
-     FractionBox[
-      RowBox[{
-       RowBox[{"DZ", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
-      RowBox[{
-       SqrtBox["DT"], " ", 
-       SqrtBox[
-        RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jmjm1"}], ",", " ", 
-    RowBox[{
-     FractionBox[
-      RowBox[{
-       RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
-      RowBox[{
-       SqrtBox["DT"], " ", 
-       SqrtBox[
-        RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jmj"}], ",", " ", 
-    RowBox[{
-     FractionBox[
-      RowBox[{
-       RowBox[{"DZ", " ", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
-      RowBox[{
-       SqrtBox["DT"], " ", 
-       SqrtBox[
-        RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jpjm1"}], ",", " ", 
-    RowBox[{
-     FractionBox[
-      RowBox[{
-       RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
-      RowBox[{
-       SqrtBox["DT"], " ", 
-       SqrtBox[
-        RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jpj"}]}], "}"}]}]], "Input",
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "Z"}], "+", "zj"}], 
+       RowBox[{
+        SqrtBox["DT"], " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmZdSqrtDT2PI"}], ",", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
+       RowBox[{
+        SqrtBox["DT"], " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmDZmZdSqrtDT2PI"}], ",", 
+     " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"Z", "+", "zj"}], 
+       RowBox[{
+        SqrtBox["DT"], " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjpZdSqrtDT2PI"}], ",", " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
+       RowBox[{
+        SqrtBox["DT"], " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmDZpZdSqrtDT2PI"}]}], 
+    "}"}]}]}]], "Input",
  CellChangeTimes->{{3.917073228178151*^9, 3.917073232520876*^9}, {
   3.917073273046821*^9, 3.9170734191309423`*^9}, {3.917073530071335*^9, 
-  3.917073581289311*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"2b373aa7-da4f-49b0-806c-9e4a78294a1b"],
+  3.917073581289311*^9}, {3.9210318298387117`*^9, 3.9210319840554695`*^9}, {
+  3.921050963216673*^9, 3.9210509647210655`*^9}, {3.921051383572091*^9, 
+  3.921051389911646*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"2b373aa7-da4f-49b0-806c-9e4a78294a1b"],
 
 Cell[BoxData[
  RowBox[{
@@ -458,143 +418,124 @@ Cell[BoxData[
    RowBox[{"2", " ", "\[Pi]"}]], " ", 
   RowBox[{"(", 
    RowBox[{
-    RowBox[{"FresnelC", "[", "Jmj", "]"}], "-", 
-    RowBox[{"FresnelC", "[", "Jmjm1", "]"}], "-", 
-    RowBox[{"FresnelC", "[", "Jpj", "]"}], "+", 
-    RowBox[{"FresnelC", "[", "Jpjm1", "]"}], "+", 
+    RowBox[{"-", 
+     RowBox[{"FresnelC", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "+", 
+    RowBox[{"FresnelC", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "+", 
+    RowBox[{"FresnelC", "[", "ZjmZdSqrtDT2PI", "]"}], "-", 
+    RowBox[{"FresnelC", "[", "ZjpZdSqrtDT2PI", "]"}], "-", 
     RowBox[{"\[ImaginaryI]", " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"-", 
-        RowBox[{"FresnelS", "[", "Jmj", "]"}]}], "+", 
-       RowBox[{"FresnelS", "[", "Jmjm1", "]"}], "+", 
-       RowBox[{"FresnelS", "[", "Jpj", "]"}], "-", 
-       RowBox[{"FresnelS", "[", "Jpjm1", "]"}]}], ")"}]}]}], 
+        RowBox[{"FresnelS", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "+", 
+       RowBox[{"FresnelS", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "+", 
+       RowBox[{"FresnelS", "[", "ZjmZdSqrtDT2PI", "]"}], "-", 
+       RowBox[{"FresnelS", "[", "ZjpZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
    ")"}]}]], "Output",
  CellChangeTimes->{
-  3.9170733709078035`*^9, {3.9170735132783327`*^9, 3.9170735817890987`*^9}},
- CellLabel->"Out[7]=",ExpressionUUID->"f2d6a123-7906-4814-a314-2f20079c0971"]
+  3.9170733709078035`*^9, {3.9170735132783327`*^9, 3.9170735817890987`*^9}, 
+   3.921031985697054*^9, 3.92103633112794*^9, 3.9210364456772704`*^9, 
+   3.9210509947499843`*^9, 3.9210511452737255`*^9, 3.9210513697141676`*^9, 
+   3.9210514118650284`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"e4972ce4-09c9-4a1b-8cd5-e0ce357e446c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
-  RowBox[{"I2", "/.", " ", 
-   RowBox[{"{", 
-    RowBox[{
+  RowBox[{"I2", "=", 
+   RowBox[{"I2", "/.", " ", 
+    RowBox[{"{", 
      RowBox[{
-      FractionBox[
-       RowBox[{
-        RowBox[{"DZ", " ", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "Z"}], "+", "zj"}], 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmZdSqrtDT2PI"}], ",", " ", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "DZ"}], "-", "Z", "+", "zj"}], 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmDZmZdSqrtDT2PI"}], ",", 
+      " ", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"Z", "+", "zj"}], 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjpZdSqrtDT2PI"}], ",", " ", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "ZjmDZpZdSqrtDT2PI"}], ",", 
+      " ", 
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Z", "-", "zj"}], ")"}], "2"], 
+        RowBox[{"4", " ", "DT"}]], "->", "SqrZjmZd4DT"}], ",", " ", 
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"DZ", "+", "Z", "-", "zj"}], ")"}], "2"], 
+        RowBox[{"4", " ", "DT"}]], "->", "SqrZjmDZmZd4DT"}], ",", 
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Z", "+", "zj"}], ")"}], "2"], 
+        RowBox[{"4", " ", "DT"}]], "->", "SqrZjpZd4DT"}], ",", " ", 
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
          RowBox[{"(", 
           RowBox[{
-           RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "-", "Z"}], 
-       RowBox[{
-        SqrtBox["DT"], " ", 
-        SqrtBox[
-         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jmjm1"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       RowBox[{
-        RowBox[{"DZ", " ", "j"}], "-", "Z"}], 
-       RowBox[{
-        SqrtBox["DT"], " ", 
-        SqrtBox[
-         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jmj"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       RowBox[{
-        RowBox[{"DZ", " ", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], 
-       RowBox[{
-        SqrtBox["DT"], " ", 
-        SqrtBox[
-         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jpjm1"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       RowBox[{
-        RowBox[{"DZ", " ", "j"}], "+", "Z"}], 
-       RowBox[{
-        SqrtBox["DT"], " ", 
-        SqrtBox[
-         RowBox[{"2", " ", "\[Pi]"}]]}]], "->", "Jpj"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"-", "DZ"}], " ", "j"}], "+", "Z"}], ")"}], "2"], 
-       RowBox[{"4", " ", "DT"}]], "->", "Kmj"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{"DZ", "-", 
-          RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
-       RowBox[{"4", " ", "DT"}]], "->", "Kmjm1"}], ",", " ", 
-     RowBox[{
-      FractionBox[
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"DZ", " ", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", "1"}], "+", "j"}], ")"}]}], "+", "Z"}], ")"}], "2"], 
-       RowBox[{"4", " ", "DT"}]], "->", "Kpjm1"}], ",", 
-     RowBox[{
-      FractionBox[
-       SuperscriptBox[
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"DZ", " ", "j"}], "+", "Z"}], ")"}], "2"], 
-       RowBox[{"4", " ", "DT"}]], "->", "Kpj"}]}], "}"}]}]}]], "Input",
- CellChangeTimes->{{3.9170737166919785`*^9, 3.9170738646017942`*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"51f539eb-a63d-44ef-a1ab-0dfc7913f782"],
+           RowBox[{"-", "DZ"}], "+", "Z", "+", "zj"}], ")"}], "2"], 
+        RowBox[{"4", " ", "DT"}]], "->", "SqrZjmDZpZd4DT"}]}], 
+     "}"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9170737166919785`*^9, 3.9170738646017942`*^9}, {
+   3.921032015705156*^9, 3.921032209685166*^9}, {3.921032252667358*^9, 
+   3.9210323386207643`*^9}, 3.921036317767696*^9, {3.9210509678246503`*^9, 
+   3.9210509688166976`*^9}, {3.921051326334259*^9, 3.9210513509494987`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"51f539eb-a63d-44ef-a1ab-0dfc7913f782"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   SqrtBox["DT"], " ", 
+   RowBox[{"-", 
+    SqrtBox["DT"]}], " ", 
    SqrtBox[
     RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-   RowBox[{"FresnelC", "[", "Jmj", "]"}]}], "-", 
+   RowBox[{"FresnelC", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "-", 
   RowBox[{
    SqrtBox["DT"], " ", 
    SqrtBox[
     RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-   RowBox[{"FresnelC", "[", "Jmjm1", "]"}]}], "+", 
+   RowBox[{"FresnelC", "[", "ZjmDZpZdSqrtDT2PI", "]"}]}], "+", 
   RowBox[{
    SqrtBox["DT"], " ", 
    SqrtBox[
     RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-   RowBox[{"FresnelC", "[", "Jpj", "]"}]}], "-", 
+   RowBox[{"FresnelC", "[", "ZjmZdSqrtDT2PI", "]"}]}], "+", 
   RowBox[{
    SqrtBox["DT"], " ", 
    SqrtBox[
     RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-   RowBox[{"FresnelC", "[", "Jpjm1", "]"}]}], "+", 
-  RowBox[{"\[ImaginaryI]", " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"2", " ", "DT", " ", 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{"Cos", "[", "Kmj", "]"}], "-", 
-        RowBox[{"Cos", "[", "Kmjm1", "]"}]}], ")"}]}], "+", 
-     RowBox[{
-      SqrtBox["DT"], " ", 
-      SqrtBox[
-       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{"-", 
-         RowBox[{"FresnelS", "[", "Jmj", "]"}]}], "+", 
-        RowBox[{"FresnelS", "[", "Jmjm1", "]"}]}], ")"}]}]}], ")"}]}], "+", 
+   RowBox[{"FresnelC", "[", "ZjpZdSqrtDT2PI", "]"}]}], "+", 
   RowBox[{"\[ImaginaryI]", " ", 
    RowBox[{"(", 
     RowBox[{
@@ -602,59 +543,258 @@ Cell[BoxData[
       RowBox[{"(", 
        RowBox[{
         RowBox[{"-", 
-         RowBox[{"Cos", "[", "Kpj", "]"}]}], "+", 
-        RowBox[{"Cos", "[", "Kpjm1", "]"}]}], ")"}]}], "+", 
+         RowBox[{"Cos", "[", "SqrZjmDZmZd4DT", "]"}]}], "+", 
+        RowBox[{"Cos", "[", "SqrZjmZd4DT", "]"}]}], ")"}]}], "+", 
      RowBox[{
       SqrtBox["DT"], " ", 
       SqrtBox[
        RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
       RowBox[{"(", 
        RowBox[{
-        RowBox[{"-", 
-         RowBox[{"FresnelS", "[", "Jpj", "]"}]}], "+", 
-        RowBox[{"FresnelS", "[", "Jpjm1", "]"}]}], ")"}]}]}], ")"}]}], "+", 
-  RowBox[{"2", " ", "DT", " ", 
+        RowBox[{"FresnelS", "[", "ZjmDZmZdSqrtDT2PI", "]"}], "-", 
+        RowBox[{"FresnelS", "[", "ZjmZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
+    ")"}]}], "+", 
+  RowBox[{"\[ImaginaryI]", " ", 
    RowBox[{"(", 
     RowBox[{
-     RowBox[{"Sin", "[", "Kmj", "]"}], "-", 
-     RowBox[{"Sin", "[", "Kmjm1", "]"}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", "DT", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cos", "[", "SqrZjmDZpZd4DT", "]"}], "-", 
+        RowBox[{"Cos", "[", "SqrZjpZd4DT", "]"}]}], ")"}]}], "+", 
+     RowBox[{
+      SqrtBox["DT"], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"FresnelS", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "-", 
+        RowBox[{"FresnelS", "[", "ZjpZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
+    ")"}]}], "+", 
   RowBox[{"2", " ", "DT", " ", 
    RowBox[{"(", 
     RowBox[{
      RowBox[{"-", 
-      RowBox[{"Sin", "[", "Kpj", "]"}]}], "+", 
-     RowBox[{"Sin", "[", "Kpjm1", "]"}]}], ")"}]}]}]], "Output",
- CellChangeTimes->{3.91707386611697*^9},
- CellLabel->"Out[9]=",ExpressionUUID->"f604f283-e95f-4d79-9b9e-af031a77def4"]
+      RowBox[{"Sin", "[", "SqrZjmDZmZd4DT", "]"}]}], "+", 
+     RowBox[{"Sin", "[", "SqrZjmZd4DT", "]"}]}], ")"}]}], "+", 
+  RowBox[{"2", " ", "DT", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", "SqrZjmDZpZd4DT", "]"}], "-", 
+     RowBox[{"Sin", "[", "SqrZjpZd4DT", "]"}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.91707386611697*^9, 3.921032016865863*^9, 3.9210322102725954`*^9, {
+   3.9210322644997635`*^9, 3.921032274317073*^9}, {3.9210323149009037`*^9, 
+   3.92103233914534*^9}, 3.9210363311608524`*^9, 3.9210364457112336`*^9, 
+   3.9210509947813196`*^9, 3.9210511453113203`*^9, 3.9210513697446413`*^9, 
+   3.9210514118959446`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"56a07617-635f-44c0-8c82-dd36c5cb17a1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"FortranForm", "[", "%9", "]"}]], "Input",
- CellChangeTimes->{{3.917073879488929*^9, 3.9170738882211623`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"8d755e6c-5ecf-4b9f-bb61-b5138b6f9371"],
+ RowBox[{"I1", "=", 
+  RowBox[{"I1", "*", 
+   RowBox[{"1", "/", "2"}], "*", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"I", "/", 
+     RowBox[{"(", 
+      RowBox[{"Pi", "*", "DT"}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.92105087852287*^9, 3.921050921424059*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"ff4919f4-cfcb-4872-9a68-002c05a1a180"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   SqrtBox["2"]], 
+  RowBox[{
+   SqrtBox[
+    FractionBox["\[ImaginaryI]", "DT"]], " ", 
+   SqrtBox["DT"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"FresnelC", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "+", 
+     RowBox[{"FresnelC", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "+", 
+     RowBox[{"FresnelC", "[", "ZjmZdSqrtDT2PI", "]"}], "-", 
+     RowBox[{"FresnelC", "[", "ZjpZdSqrtDT2PI", "]"}], "-", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelS", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "+", 
+        RowBox[{"FresnelS", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "+", 
+        RowBox[{"FresnelS", "[", "ZjmZdSqrtDT2PI", "]"}], "-", 
+        RowBox[{"FresnelS", "[", "ZjpZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{3.921050922140761*^9, 3.921050994786307*^9, 
+  3.921051145335569*^9, 3.921051369770544*^9, 3.921051411900942*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"01882561-e0d0-402e-85ac-783b3697a471"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"I2", "=", 
+  RowBox[{"Simplify", "[", 
+   RowBox[{"I2", "*", 
+    RowBox[{"1", "/", "2"}], "*", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{"I", "/", 
+      RowBox[{"(", 
+       RowBox[{"Pi", "*", "DT"}], ")"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.921050935874471*^9, 3.921050948725376*^9}, {
+  3.9210510161142616`*^9, 3.921051039651121*^9}, {3.9210511303962803`*^9, 
+  3.921051132538833*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"13ed68f1-ac93-4018-9074-4c670da7bc7f"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"2", " ", 
+    SqrtBox["\[Pi]"]}]], 
+  RowBox[{
+   SqrtBox[
+    FractionBox["\[ImaginaryI]", "DT"]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SqrtBox["DT"]}], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+      RowBox[{"FresnelC", "[", "ZjmDZmZdSqrtDT2PI", "]"}]}], "-", 
+     RowBox[{
+      SqrtBox["DT"], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+      RowBox[{"FresnelC", "[", "ZjmDZpZdSqrtDT2PI", "]"}]}], "+", 
+     RowBox[{
+      SqrtBox["DT"], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+      RowBox[{"FresnelC", "[", "ZjmZdSqrtDT2PI", "]"}]}], "+", 
+     RowBox[{
+      SqrtBox["DT"], " ", 
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+      RowBox[{"FresnelC", "[", "ZjpZdSqrtDT2PI", "]"}]}], "+", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", "DT", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Cos", "[", "SqrZjmDZmZd4DT", "]"}]}], "+", 
+           RowBox[{"Cos", "[", "SqrZjmZd4DT", "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"FresnelS", "[", "ZjmDZmZdSqrtDT2PI", "]"}], "-", 
+           RowBox[{"FresnelS", "[", "ZjmZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
+       ")"}]}], "+", 
+     RowBox[{"\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", "DT", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Cos", "[", "SqrZjmDZpZd4DT", "]"}], "-", 
+           RowBox[{"Cos", "[", "SqrZjpZd4DT", "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         SqrtBox["DT"], " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]], " ", "Z", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"FresnelS", "[", "ZjmDZpZdSqrtDT2PI", "]"}], "-", 
+           RowBox[{"FresnelS", "[", "ZjpZdSqrtDT2PI", "]"}]}], ")"}]}]}], 
+       ")"}]}], "+", 
+     RowBox[{"2", " ", "DT", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Sin", "[", "SqrZjmDZmZd4DT", "]"}]}], "+", 
+        RowBox[{"Sin", "[", "SqrZjmZd4DT", "]"}]}], ")"}]}], "+", 
+     RowBox[{"2", " ", "DT", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sin", "[", "SqrZjmDZpZd4DT", "]"}], "-", 
+        RowBox[{"Sin", "[", "SqrZjpZd4DT", "]"}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.9210509496240807`*^9, {3.921050994792288*^9, 3.921051042040141*^9}, 
+   3.9210511457265234`*^9, 3.9210513701613855`*^9, 3.9210514122924294`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"05cab2a8-ef01-43c0-a825-8de5735db77a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", "I1", "]"}]], "Input",
+ CellChangeTimes->{{3.917073879488929*^9, 3.9170738882211623`*^9}, {
+  3.9210365231168013`*^9, 3.921036533729221*^9}, {3.9210365905142856`*^9, 
+  3.9210365916182966`*^9}, {3.9210510859546285`*^9, 3.921051087322379*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"8d755e6c-5ecf-4b9f-bb61-b5138b6f9371"],
 
 Cell["\<\
-        Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(Jmj) - \
-Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(Jmjm1) + Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(Jpj) - 
-     -  Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(Jpjm1) + (0,1)*(2*DT*(Cos(Kmj) - \
-Cos(Kmjm1)) + Sqrt(DT)*Sqrt(2*Pi)*Z*(-FresnelS(Jmj) + FresnelS(Jmjm1))) + 
-     -  (0,1)*(2*DT*(-Cos(Kpj) + Cos(Kpjm1)) + \
-Sqrt(DT)*Sqrt(2*Pi)*Z*(-FresnelS(Jpj) + FresnelS(Jpjm1))) + 2*DT*(Sin(Kmj) - \
-Sin(Kmjm1)) + 
-     -  2*DT*(-Sin(Kpj) + Sin(Kpjm1))\
+        (Sqrt((0,1)/DT)*Sqrt(DT)*(-FresnelC(ZjmDZmZdSqrtDT2PI) + \
+FresnelC(ZjmDZpZdSqrtDT2PI) + FresnelC(ZjmZdSqrtDT2PI) - \
+FresnelC(ZjpZdSqrtDT2PI) - 
+     -      (0,1)*(-FresnelS(ZjmDZmZdSqrtDT2PI) + FresnelS(ZjmDZpZdSqrtDT2PI) \
++ FresnelS(ZjmZdSqrtDT2PI) - FresnelS(ZjpZdSqrtDT2PI))))/Sqrt(2)\
 \>", "Output",
- CellChangeTimes->{3.91707388878354*^9},
+ CellChangeTimes->{3.91707388878354*^9, 3.9210363311658397`*^9, 
+  3.92103644571622*^9, 3.9210365237933493`*^9, 3.9210365921525*^9, 
+  3.921050994821212*^9, 3.921051088046983*^9, 3.921051145753462*^9, 
+  3.9210513701885543`*^9, 3.9210514123190536`*^9},
  CellLabel->
-  "Out[10]//FortranForm=",ExpressionUUID->"2e60b337-be99-4361-81d6-\
-402fc60fdbf8"]
-}, Open  ]]
+  "Out[7]//FortranForm=",ExpressionUUID->"f70ccfcc-e143-4a72-9149-\
+4b5ac9b74a90"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FortranForm", "[", "I2", "]"}]], "Input",
+ CellChangeTimes->{{3.9210510914911437`*^9, 3.9210510992586145`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"11e7a909-e211-4601-be65-e451a4b373d5"],
+
+Cell["\<\
+        (Sqrt((0,1)/DT)*(-(Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(ZjmDZmZdSqrtDT2PI)) \
+- Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(ZjmDZpZdSqrtDT2PI) + \
+Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(ZjmZdSqrtDT2PI) + 
+     -      Sqrt(DT)*Sqrt(2*Pi)*Z*FresnelC(ZjpZdSqrtDT2PI) + \
+(0,1)*(2*DT*(-Cos(SqrZjmDZmZd4DT) + Cos(SqrZjmZd4DT)) + 
+     -         Sqrt(DT)*Sqrt(2*Pi)*Z*(FresnelS(ZjmDZmZdSqrtDT2PI) - \
+FresnelS(ZjmZdSqrtDT2PI))) + 
+     -      (0,1)*(2*DT*(Cos(SqrZjmDZpZd4DT) - Cos(SqrZjpZd4DT)) + \
+Sqrt(DT)*Sqrt(2*Pi)*Z*(FresnelS(ZjmDZpZdSqrtDT2PI) - \
+FresnelS(ZjpZdSqrtDT2PI))) + 
+     -      2*DT*(-Sin(SqrZjmDZmZd4DT) + Sin(SqrZjmZd4DT)) + \
+2*DT*(Sin(SqrZjmDZpZd4DT) - Sin(SqrZjpZd4DT))))/(2.*Sqrt(Pi))\
+\>", "Output",
+ CellChangeTimes->{3.921051099919478*^9, 3.9210511457564545`*^9, 
+  3.9210513701915474`*^9, 3.9210514123230443`*^9},
+ CellLabel->
+  "Out[8]//FortranForm=",ExpressionUUID->"83053589-9e17-4801-9546-\
+3d36f3b405c1"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "ToMatlab.m"}]], "Input",
+ CellChangeTimes->{{3.9210365415965776`*^9, 3.921036546745432*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"440f776c-2df2-45bf-8415-12725d9e84b8"]
 },
-WindowSize->{1248., 725.25},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1440, 747.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
 TaggingRules-><|"TryRealOnly" -> False|>,
-FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"2d84cba6-dfbe-4878-94b6-9d7572743882"
 ]
@@ -670,25 +810,38 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1582, 46, 86, "Input",ExpressionUUID->"29d0199e-9100-47f7-8539-8363fc4b47ca"],
-Cell[2165, 70, 2629, 89, 95, "Output",ExpressionUUID->"e544af2d-2cf0-4bcb-80e3-40e36b7f1dad"]
+Cell[580, 22, 1552, 45, 86, "Input",ExpressionUUID->"29d0199e-9100-47f7-8539-8363fc4b47ca"],
+Cell[2135, 69, 2361, 77, 74, "Output",ExpressionUUID->"889fb32a-78d0-4d0d-ba62-7db7d6fb0134"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4831, 164, 1495, 44, 65, "Input",ExpressionUUID->"761fb3e8-2e49-479e-a3f3-37da1a16fb2c"],
-Cell[6329, 210, 5698, 191, 186, "Output",ExpressionUUID->"762c6834-72f5-4dce-a488-b9fbd77510cc"]
+Cell[4533, 151, 1440, 42, 65, "Input",ExpressionUUID->"761fb3e8-2e49-479e-a3f3-37da1a16fb2c"],
+Cell[5976, 195, 5121, 168, 186, "Output",ExpressionUUID->"0babcbd4-dca7-4b71-94ce-9e6b99d2f349"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12064, 406, 1373, 45, 53, "Input",ExpressionUUID->"2b373aa7-da4f-49b0-806c-9e4a78294a1b"],
-Cell[13440, 453, 835, 22, 33, "Output",ExpressionUUID->"f2d6a123-7906-4814-a314-2f20079c0971"]
+Cell[11134, 368, 1446, 43, 52, "Input",ExpressionUUID->"2b373aa7-da4f-49b0-806c-9e4a78294a1b"],
+Cell[12583, 413, 1123, 26, 53, "Output",ExpressionUUID->"e4972ce4-09c9-4a1b-8cd5-e0ce357e446c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14312, 480, 2351, 76, 117, "Input",ExpressionUUID->"51f539eb-a63d-44ef-a1ab-0dfc7913f782"],
-Cell[16666, 558, 2204, 69, 77, "Output",ExpressionUUID->"f604f283-e95f-4d79-9b9e-af031a77def4"]
+Cell[13743, 444, 2354, 69, 117, "Input",ExpressionUUID->"51f539eb-a63d-44ef-a1ab-0dfc7913f782"],
+Cell[16100, 515, 2648, 75, 96, "Output",ExpressionUUID->"56a07617-635f-44c0-8c82-dd36c5cb17a1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18907, 632, 212, 3, 43, "Input",ExpressionUUID->"8d755e6c-5ecf-4b9f-bb61-b5138b6f9371"],
-Cell[19122, 637, 620, 13, 98, "Output",ExpressionUUID->"2e60b337-be99-4361-81d6-402fc60fdbf8"]
-}, Open  ]]
+Cell[18785, 595, 363, 9, 43, "Input",ExpressionUUID->"ff4919f4-cfcb-4872-9a68-002c05a1a180"],
+Cell[19151, 606, 1062, 26, 79, "Output",ExpressionUUID->"01882561-e0d0-402e-85ac-783b3697a471"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20250, 637, 507, 12, 43, "Input",ExpressionUUID->"13ed68f1-ac93-4018-9074-4c670da7bc7f"],
+Cell[20760, 651, 2857, 81, 125, "Output",ExpressionUUID->"05cab2a8-ef01-43c0-a825-8de5735db77a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23654, 737, 363, 5, 43, "Input",ExpressionUUID->"8d755e6c-5ecf-4b9f-bb61-b5138b6f9371"],
+Cell[24020, 744, 673, 13, 64, "Output",ExpressionUUID->"f70ccfcc-e143-4a72-9149-4b5ac9b74a90"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24730, 762, 213, 3, 43, "Input",ExpressionUUID->"11e7a909-e211-4601-be65-e451a4b373d5"],
+Cell[24946, 767, 923, 18, 115, "Output",ExpressionUUID->"83053589-9e17-4801-9546-3d36f3b405c1"]
+}, Open  ]],
+Cell[25884, 788, 200, 3, 28, "Input",ExpressionUUID->"440f776c-2df2-45bf-8415-12725d9e84b8"]
 }
 ]
 *)
